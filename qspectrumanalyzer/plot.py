@@ -239,6 +239,10 @@ class SpectrumPlotWidget:
     def clear_plot(self):
         """Clear main spectrum curve"""
         self.curve.clear()
+        self.plot.enableAutoRange(axis='y')
+        self.plot.setAutoVisible(y=True)
+        self.plot.enableAutoRange(axis='x')
+        self.plot.setAutoVisible(x=True)
 
     def clear_peak_hold_max(self):
         """Clear max. peak hold curve"""
@@ -333,6 +337,8 @@ class WaterfallPlotWidget:
     def clear_plot(self):
         """Clear waterfall plot"""
         self.counter = 0
+        self.plot.enableAutoRange(axis='x')
+        self.plot.setAutoVisible(x=True)
 
     def recalculate_plot(self, data_storage):
         """Recalculate waterfall plot"""

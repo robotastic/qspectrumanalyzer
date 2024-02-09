@@ -114,7 +114,7 @@ class DataStorage(QtCore.QObject):
         """Update data storage"""
         if self.y is not None and len(data["y"]) != len(self.y):
             print("{:d} bins coming from backend, expected {:d}".format(len(data["y"]), len(self.y)))
-            return
+            #return
 
         self.average_counter += 1
 

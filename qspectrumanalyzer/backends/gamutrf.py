@@ -4,7 +4,7 @@ import pandas as pd
 import datetime
 import json
 import logging
-
+import urllib.request
 from Qt import QtCore
 
 from qspectrumanalyzer import subprocess
@@ -25,7 +25,12 @@ class PowerThread(BasePowerThread):
         self.socket.connect("tcp://localhost:10000")
         self.socket.setsockopt_string(zmq.SUBSCRIBE, "")
 
-
+        self.freq_start_hz = start_freq*1000000
+        self.freq_stop_hz = stop_freq*1000000
+        url = f"http://localhost:9001/reconf?freq_start={self.freq_start_hz}&freq_end={self.freq_stop_hz}"
+        print(url)
+        contents = urllib.request.urlopen(url).read()
+        print(contents)
         """Setup rtl_power_fftw params"""
         crop = crop * 100
         overlap = crop * 2
@@ -43,6 +48,7 @@ class PowerThread(BasePowerThread):
             "stop_freq": stop_freq,
             "freq_range": freq_range,
             "device": device,
+            "hops": 0,
             "sample_rate": int(sample_rate),
             "bin_size": bin_size,
             "bins": bins,
@@ -216,10 +222,12 @@ class PowerThread(BasePowerThread):
                         frame_df = frame_df.sort_values('freq')
                         self.databuffer["x"] = frame_df['freq'].to_numpy()
                         self.databuffer["y"] = frame_df['db'].to_numpy()
-                        #self.data_storage.update(self.databuffer)
+                        print(frame_df)
+                        print(frame_df["freq"].iloc[0])
+                        print(frame_df["freq"].iloc[-1])
                         if not self.initial_frame:
-                            
-                            self.data_storage.update(self.databuffer)
+                            if (abs(frame_df["freq"].iloc[0] - self.freq_start_hz) < 5000000) and (abs(frame_df["freq"].iloc[-1] - self.freq_stop_hz) < 5000000):
+                                self.data_storage.update(self.databuffer)
                         else:
                             self.initial_frame = False    
 
