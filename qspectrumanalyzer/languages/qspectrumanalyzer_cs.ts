@@ -330,42 +330,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="154"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="155"/>
         <source>gamutrf</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="155"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="156"/>
         <source>E&amp;xecutable:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="157"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="158"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="159"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="160"/>
         <source>Sa&amp;mple rate:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="160"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="161"/>
         <source>&amp;Waterfall history size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="158"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="159"/>
         <source>&amp;Device:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="161"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="162"/>
         <source>Bandwidt&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="163"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="164"/>
         <source>&amp;LNB LO:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -375,17 +375,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="169"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="170"/>
         <source>Negative frequency for upconverters, positive frequency for downconverters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="164"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="165"/>
         <source>Add&amp;itional parameters:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_qspectrumanalyzer_settings.py" line="170"/>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="171"/>
         <source> MHz</source>
         <translation type="unfinished"></translation>
     </message>

@@ -67,6 +67,7 @@ class PowerThread(BasePowerThread):
         self.txt_buf = ""
         self.scan_configs = {}
         self.fftbuffer = None
+        self.initial_frame = True
 
     def get_hop_freq(self, hop):
         """Get start and stop frequency for particular hop"""
@@ -130,6 +131,7 @@ class PowerThread(BasePowerThread):
                 pass
 
         self.prev_line = line
+#{'description': '', 'tuning_range': 0, 'tuning_range_freq_start': 700000000, 'tuning_range_freq_end': 900000000, 'freq_start': 700000000, 'freq_end': 900000000, 'sample_rate': 50000000, 'nfft': 1024, 'tune_step_fft': 512, 'tune_step_hz': 42500000}
 
     def read_new_frame_df(self, df, discard_time):
         frame_df = None
@@ -211,9 +213,15 @@ class PowerThread(BasePowerThread):
                     scan_config, frame_df = self.read_new_frame_df(df, False)   
                     
                     if frame_df is not None:
+                        frame_df = frame_df.sort_values('freq')
                         self.databuffer["x"] = frame_df['freq'].to_numpy()
                         self.databuffer["y"] = frame_df['db'].to_numpy()
-                        self.data_storage.update(self.databuffer)    
+                        #self.data_storage.update(self.databuffer)
+                        if not self.initial_frame:
+                            
+                            self.data_storage.update(self.databuffer)
+                        else:
+                            self.initial_frame = False    
 
 
 
