@@ -60,6 +60,7 @@ setup(
     install_requires=[
         "soapy_power>=1.6.0",
         "pyqtgraph>=0.10.0",
+        "pyzmq>=22.3.0"
         "Qt.py",
     ],
     options={

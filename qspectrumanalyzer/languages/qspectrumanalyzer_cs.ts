@@ -330,6 +330,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui_qspectrumanalyzer_settings.py" line="154"/>
+        <source>gamutrf</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui_qspectrumanalyzer_settings.py" line="155"/>
         <source>E&amp;xecutable:</source>
         <translation type="unfinished"></translation>

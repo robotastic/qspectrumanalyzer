@@ -152,6 +152,7 @@ class Ui_QSpectrumAnalyzerSettings(object):
         self.backendComboBox.setItemText(2, _translate("QSpectrumAnalyzerSettings", "rtl_power_fftw"))
         self.backendComboBox.setItemText(3, _translate("QSpectrumAnalyzerSettings", "rtl_power"))
         self.backendComboBox.setItemText(4, _translate("QSpectrumAnalyzerSettings", "hackrf_sweep"))
+        self.backendComboBox.setItemText(4, _translate("QSpectrumAnalyzerSettings", "gamutrf"))
         self.label.setText(_translate("QSpectrumAnalyzerSettings", "E&xecutable:"))
         self.executableEdit.setText(_translate("QSpectrumAnalyzerSettings", "soapy_power"))
         self.executableButton.setText(_translate("QSpectrumAnalyzerSettings", "..."))
